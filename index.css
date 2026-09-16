@@ -1,7 +1,7 @@
 @import url("./theme.css");
 
 body {
-    background-color: var(--color-primary);
+    background-color: #627188;
     font-family: var(--font-body);
     margin: 20px;
 }
@@ -126,7 +126,7 @@ body {
 .project-card {
     padding: 5px;
     margin: 5px;
-    background-color: var(--color-accent);
+    background-color: #b5baca;
     border-radius: var(--radius);
     text-align: center;
 }

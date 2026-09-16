@@ -22,10 +22,10 @@
     /* Backgrounds */
     --color-bg-page: #f4f4f4;       /* page background on activity/project pages */
     --color-bg-card: #ffffff;       /* white card/container background */
-    --color-bg-overlay: rgba(74, 122, 110, 0.5); /* translucent header/hero overlay */
+    --color-bg-overlay: rgba(181, 186, 202, 0.9); /* translucent header/hero overlay */
 
     /* Typography */
-    --font-body: Arial, Helvetica, sans-serif;
+    --font-body: Georgia, "Times New Roman", serif;
 
     /* Shape */
     --radius: 10px;
