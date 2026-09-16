@@ -30,6 +30,8 @@ body {
 .header .name {
     text-align: left;
     font-size: 1.5em;
+    white-space: nowrap;
+    min-width: 260px;
 }
 
 .header .navbar {
@@ -62,12 +64,15 @@ body {
 
 .home-content h1 {
     position: relative;
+    display: inline-block;
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
-    background: var(--color-bg-overlay);
-    padding: 5px;
+    background: #b5baca;
+    padding: 5px 14px;
     border-radius: var(--radius);
+    white-space: nowrap;
+    color: var(--color-text-on-dark);
 }
 
 .home-content p {
@@ -132,11 +137,12 @@ body {
 }
 
 .project-link {
-    color: var(--color-text-muted);
+    color: #2d3b4f;
 }
 
 .project-title {
     font-size: 1.5em;
+    color: #2d3b4f;
 }
 
 .project-desc {
