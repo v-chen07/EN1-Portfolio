@@ -181,6 +181,20 @@ pre code, pre code {
     border: 0;
 }
 
+.proj-showcase > .proj-img-container,
+.proj-showcase > .proj-video-container {
+    flex: 0 0 calc(50% - 10px);
+    width: calc(50% - 10px);
+    margin: 0;
+    aspect-ratio: 16 / 9;
+}
+
+.proj-showcase > .proj-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* ***************************** */
 /* Responsive: tablet and mobile */
 /* ***************************** */
