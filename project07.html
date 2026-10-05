@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project 7: Draw a Square</title>
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+
+    <!-- Header and Navigation Section -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="./index.html" class="active">Home</a>
+        </nav>
+    </header>
+
+    <!-- Project Information -->
+    <div class="proj-container">
+
+        <h1 class="proj-header">Project Portfolio</h1>
+
+        <div class="proj-showcase">
+            <div class="proj-img-container">
+                <img src="./images/drawsquarebot.png" alt="Blue and yellow robot with a marker mounted in the center">
+            </div>
+            <div class="proj-img-container">
+                <img src="./images/drawsquare.png" alt="Square drawn by the robot">
+            </div>
+        </div>
+
+        <div class="proj-video-container">
+            <iframe src="https://www.youtube.com/embed/YmvoNeBz308" title="Project 7: Draw a Square video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h2 class="proj-header">Project 7: Draw a Square</h2>
+
+        <div class="proj-desc">
+            <p>My robot is designed to draw a square by using two wheels to control its movement and a marker to trace the path. The robot moves forward for a set amount of time and then turns 90 degrees before repeating the process four times. Ideally, this allows the robot to create four straight sides and four 90-degree corners, forming a square.</p>
+
+            <p>During my first attempts, the robot was not able to create accurate 90-degree angles. I realized that the marker was not properly aligned with the circle of rotation of the wheels. Because the marker was offset from the robot&rsquo;s rotation point, the marker would move in a curved path when the robot turned, causing the corners of the square to be inaccurate.</p>
+
+            <p>To fix this problem, I wrapped a rubber band around the bottom of the marker and used a bar to hold it securely in place. This kept the marker from shifting and maintained its alignment with the robot&rsquo;s wheel rotation. By keeping the marker aligned with the circle of rotation, the robot was able to turn more accurately and create much closer to 90-degree angles.</p>
+
+            <p>In my one attempt in class the robot successfully drew the square shown above. However, when it finished the fourth side, its ending position was slightly farther than the original starting point.</p>
+        </div>
+
+    </div>
+    <!-- End Project Information -->
+
+</body>
+</html>
