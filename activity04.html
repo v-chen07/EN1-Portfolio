@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Activity 4</title>
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="./index.html" class="active">Home</a>
+        </nav>
+    </header>
+
+    <div class="proj-container">
+
+        <h1 class="proj-header">Project Portfolio</h1>
+
+        <div class="proj-code">
+            <h3>Code:</h3>
+            <pre><code># Setup: one motor is connected to port A.
+from hub import port, button
+import runloop
+import motor
+
+# Set the starting speed, speed increase, and maximum speed in degrees per second.
+START_SPEED = 200
+SPEED_INCREASE = 100
+MAX_SPEED = 1000
+
+async def main():
+    # Keep the motor off until both buttons are pressed together.
+    motor_enabled = False
+
+    # Keep the motor locked off after the later simultaneous button press.
+    motor_locked_off = False
+
+    # Track button states so holding a button does not repeatedly increase speed.
+    previous_right_pressed = False
+    previous_left_pressed = False
+    previous_both_pressed = False
+
+    # Remember the current speed and direction.
+    current_speed = 0
+    current_direction = 0
+
+    # Check the buttons continuously.
+    while True:
+        right_pressed = button.pressed(button.RIGHT) > 0
+        left_pressed = button.pressed(button.LEFT) > 0
+        both_pressed = right_pressed and left_pressed
+
+        # Detect a new simultaneous press.
+        if both_pressed and not previous_both_pressed:
+            if not motor_enabled:
+                # The first simultaneous press enables the motor.
+                motor_enabled = True
+            else:
+                # A later simultaneous press locks the motor off.
+                motor_locked_off = True
+                motor.stop(port.A)
+
+        # Detect a new right-button press and increase clockwise speed.
+        elif motor_enabled and not motor_locked_off and right_pressed and not previous_right_pressed:
+            if current_direction != 1:
+                current_speed = START_SPEED
+            else:
+                current_speed = min(current_speed + SPEED_INCREASE, MAX_SPEED)
+
+            current_direction = 1
+            motor.run(port.A, current_speed)
+
+        # Detect a new left-button press and increase counterclockwise speed.
+        elif motor_enabled and not motor_locked_off and left_pressed and not previous_left_pressed:
+            if current_direction != -1:
+                current_speed = START_SPEED
+            else:
+                current_speed = min(current_speed + SPEED_INCREASE, MAX_SPEED)
+
+            current_direction = -1
+            motor.run(port.A, -current_speed)
+
+        # Save button states for checking whether a new press happens next time.
+        previous_right_pressed = right_pressed
+        previous_left_pressed = left_pressed
+        previous_both_pressed = both_pressed
+
+        # Pause briefly before checking again.
+        await runloop.sleep_ms(20)
+
+runloop.run(main())</code></pre>
+        </div>
+
+        <h2 class="proj-header">Activity 4: Programming with Sensors</h2>
+
+        <div class="proj-desc">
+            <p>Pressing both buttons at the same time turns on/off the motors. The left button controls the motor spinning counterclockwise, while the right button controls the motor spinning clockwise. Pressing either button again increases the speed of the motors.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
