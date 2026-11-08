@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Project 10: Haunted House</title>
+    <title>Project 11: High or Low</title>
     <link rel="stylesheet" href="./project.css">
 </head>
 <body>
@@ -17,17 +17,22 @@
         <h1 class="proj-header">Project Portfolio</h1>
 
         <div class="proj-img-container">
-            <img src="./images/hauntedhouse.png" alt="Haunted house project" style="max-width: 400px; width: 100%;">
+            <img src="./images/highorlow.png" alt="Project 11 high or low image" style="max-width: 400px; width: 100%;">
         </div>
 
         <div class="proj-video-container">
-            <iframe src="https://www.youtube.com/embed/KvVfIAAmk_g?autoplay=1&amp;mute=1&amp;playsinline=1" title="Haunted house project video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/X_Okv5RwaRQ" title="High or Low video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p><a href="https://youtu.be/X_Okv5RwaRQ">Watch this video on YouTube</a></p>
+
+        <h2 class="proj-header">Project 11: High or Low</h2>
+
+        <div class="proj-desc" style="text-align: center; margin-top: -10px;">
+            <p><strong>Supervised Classification Machine Learning</strong></p>
         </div>
 
-        <h2 class="proj-header">Project 10: Haunted House</h2>
-
         <div class="proj-desc">
-            <p>For the haunted house, we built a scissor lift inside a bucket to launch a skull (or any object up to around 35g) into the air. We attached a distance sensor to the side of the bucket, so anyone reaching over would ideally activate the scissor lift, causing the skull to launch unexpectedly. Unfortunately, the lift was very gimmicky since, when the position of the gear shifted a little due to the sudden motion, it wouldn't run smoothly.</p>
+            <p>Using labeled data to train a model that can determine “high” or “low” based on the nearest neighbor. The left hub button puts the model into training mode, where I can label the distance from the distance sensor as tall or short. When the indicator is turned to the left the data collected will be labeled short and the right will label it tall. After collecting the data, the right hub button will put the model into testing mode. Based on the distance, the motor will turn 90 degrees clockwise if the height is short and will turn 90 degrees counterclockwise if the height is tall.</p>
         </div>
 
     </div>
