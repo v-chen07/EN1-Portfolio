@@ -73,6 +73,10 @@ body {
     border-radius: var(--radius);
 }
 
+.proj-img-container img.colorsearch-image {
+    max-width: 70%;
+}
+
 .proj-showcase {
     display: flex;
     gap: 20px;
@@ -158,6 +162,22 @@ pre code, pre code {
     height: 150px;
     object-fit: cover;
     border-radius: var(--radius);
+}
+
+.project14-config {
+    margin: 20px 0;
+}
+
+.project14-config > img {
+    display: block;
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: var(--radius);
+}
+
+.project14-config figcaption {
+    text-align: center;
 }
 
 /* Optional block: an embedded video (e.g. YouTube). The padding-top  */
